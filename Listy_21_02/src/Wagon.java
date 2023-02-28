@@ -34,4 +34,24 @@ public class Wagon {
         for(Pasazer p:pasazerList)
             System.out.println(p.getImie()+ p.getNazwisko());
     }
+
+    public void wyswietlInfoWagonu(){
+        System.out.println("liczba mijesc w wagonie "+ maxMiejsc);
+        System.out.println("liczba pasazerow w wagonie "+pasazerList.size());
+        System.out.println("liczba wolnyhc miejsc "+(maxMiejsc- pasazerList.size()));
+        System.out.println("Imiona i nazwiska pasazerow ");
+        wyswietlPasazerow();
+    }
+
+    public int ileZeZnizkaSeniora(){
+        int liczik=0;
+        for(Pasazer p:pasazerList){
+            if(p.getWiek()>=65)
+                liczik++;
+        }
+        return liczik;
+    }
+
+
+
 }
