@@ -12,7 +12,7 @@ public class Main {
         countriesService.showCountriesInNatureOrder(Comparator.reverseOrder());
 
         System.out.println("znaki polskie");
-        countriesService.showCountriesInNatureOrder(StringNaturalOrderComparator.compare());
+        countriesService.showCountriesInNatureOrder(new StringNaturalOrderComparator());
 
     }
 }
